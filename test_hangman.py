@@ -49,7 +49,7 @@ def test_get_available_letters():
         print("SUCCESS: get_available_letters()")
  
 # Michael O'Connor
- def test_match_with_gaps():
+def test_match_with_gaps():
 
     failure = False
     my_word1 = "ph_ sic_ "
@@ -62,6 +62,21 @@ def test_get_available_letters():
 
     if not failure:
         print("SUCCESS: match_with_gaps()")
+
+# Mariah Papy        
+def test_is_word_guessed():
+
+ passed = True
+ 
+ test = {True: [("hello", ["h", "e","l", "o"]), ("the", ["t", "h","e"]), ("suppers", ["s", "u","p", "e", "r", "s"])], 
+ False: [("hello", ["h", "k"]), ("yellow", ["l"]), ("hi", ["j", "k", "f"])]}
+ 
+ for t, l in test.items():
+ for word, guesses in l:
+ if is_word_guessed(word, guesses) != t:
+ passed = False
+ print(word, guesses)
+ print_fail_or_pass(passed, "test_is_word_guessed")
         
 
 
