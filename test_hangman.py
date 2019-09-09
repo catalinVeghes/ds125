@@ -47,6 +47,21 @@ def test_get_available_letters():
     
     if not failure:
         print("SUCCESS: get_available_letters()")
+ 
+# Michael O'Connor
+ def test_match_with_gaps():
+
+    failure = False
+    my_word1 = "ph_ sic_ "
+    other_word1 = "physics"
+
+    if match_with_gaps(my_word1, other_word1):
+        print("FAILURE: match_with_gaps()")
+        print("\tExpected return was False but", my_word1, "with other word", other_word1, "returned True.")
+        failure = True
+
+    if not failure:
+        print("SUCCESS: match_with_gaps()")
         
 
 
