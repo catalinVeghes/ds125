@@ -100,6 +100,8 @@ def test_get_available_letters():
         [['a', 'm', 'n', 'z'], 'bcdfghjloqtuvwxy'],
         [['a', 'm', 'n', 'z', 'o'], 'bcdfghjlqtuvwxy'],
         [['e', 'i', 'k', 'p', 'r', 's'], 'abcdfghjlmnoqtuvwxyz'],
+        [['c', 'b', 'a'], 'defghijklmnopqrstuvwxyz'] #out of order available letters
+        [['a', 'b', 'a'], 'defghijklmnopqrstuvwxyz'] #repeated letters
     ]
 
     for index in range(1):
